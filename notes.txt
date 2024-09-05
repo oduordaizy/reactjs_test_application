@@ -3,3 +3,18 @@ JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or a
 
 App.js is the root component file.
 You can however create other component files, then export them to the root file.
+
+JSX looks a lot like HTML, but it is a bit stricter and can display dynamic information. 
+Rules of JSX
+1. Return a single root element.
+2. Close all the tags.
+3. Use camelCase for most things.
+
+JSX is a special way of writing JavaScript. That means it’s possible to use JavaScript insideit—with curly 
+braces { }.
+
+{{ and }} - signify objects in JSX
+
+Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the 
+props you can pass to an <img>:
+
