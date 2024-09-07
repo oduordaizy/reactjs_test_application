@@ -1,86 +1,98 @@
-import React from "react";
-import Gallery from './Gallery.js'
-import {Profile} from './Gallery.js'
+import React, { useState } from "react";
+import Gallery from './Gallery.js';
+//import {Profile} from './Gallery.js'
+import Fav1 from "./Fav1.js";
 
-function AboutPage(){
-  return(
+function AboutPage() {
+  return (
     <>
-    <h1>About</h1>
-    <p>Hello there <br />How do you do? </p>
+      <h1>About</h1>
+      <p>Hello there <br />How do you do? </p>
     </>
-  )
+  );
 }
 
-function MyButton(){
+function MyButton() {
   return (
     <button>
       This is my button
     </button>
-  )
+  );
 }
 
-//dynamically specifying attributes within the JSX file
-function Avatar(){
+// Dynamically specifying attributes within the JSX file
+function Avatar() {
   const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
   const description = "Gregorio Y. Zara";
 
-  return(
+  return (
     <img
       className="avatar"
       src={avatar}
       alt={description}
     />
-
-  )
-
+  );
 }
 
-function ToDoList(){
+function ToDoList() {
   const name = "Daisy";
-  return(
+  return (
     <p>This is {name}'s To Do List</p>
-  )
+  );
 }
 
 const today = new Date();
 
-function FormatDate(date){
+function FormatDate(date) {
   return new Intl.DateTimeFormat(
     'en-US',
-    {weekday:'long'}
-  ).format(date)
-
+    { weekday: 'long' }
+  ).format(date);
 }
 
-function NewToDoList(){
+function NewToDoList() {
   return (
-    <ul style={{ 
+    <ul style={{
       backgroundColor: "#363737 ",
-      color: 'white'   
+      color: 'white'
     }}>
       <li>Improve the videophone</li>
       <li>Prepare aeronautics lectures</li>
-      <li>Work on the alcohol fuelled engine</li>
-
+      <li>Work on the alcohol-fuelled engine</li>
     </ul>
-  )
+  );
 }
 
-function App(){
+function FavoriteColor() {
+  const [color, setColor] = useState("red"); //color is the current state, setColor is teh function used to update our state
+
+  return (
+    <>
+      <h1>My favorite color is {color}!!</h1>
+      <button type="button" onClick={() => setColor("blue")}>Blue</button>
+      <button type="button" onClick={() => setColor("red")}>Red</button>
+      <button type="button" onClick={() => setColor("pink")}>Pink</button>
+      <button type="button" onClick={() => setColor("green")}>Green</button>
+    </>
+  );
+}
+
+function App() {
   return (
     <div>
       <h1>Welcome to my first react Application</h1>
-      <AboutPage></AboutPage>
-      <MyButton></MyButton>
-      <Gallery></Gallery>
+      <Fav1></Fav1>
+      <AboutPage />
+      <MyButton />
+      <Gallery />
       <h1>Avatar dynamic image</h1>
-      <Avatar></Avatar>
-      <ToDoList></ToDoList>
+      <Avatar />
+      <ToDoList />
       <h1> To Do list for {FormatDate(today)}</h1>
-      <NewToDoList></NewToDoList>
+      <NewToDoList />
+      <FavoriteColor />
     </div>
-  )
+  );
 }
 
-
-export default App; //specifies the main component in the file
+export default App; // Specifies the main component in the file
