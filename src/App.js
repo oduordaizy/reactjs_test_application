@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Gallery from './Gallery.js';
 //import {Profile} from './Gallery.js'
-import Fav1 from "./Fav1.js";
+
+import { Garage } from "./more.js";
 
 function AboutPage() {
   return (
@@ -81,7 +82,7 @@ function App() {
   return (
     <div>
       <h1>Welcome to my first react Application</h1>
-      <Fav1></Fav1>
+     
       <AboutPage />
       <MyButton />
       <Gallery />
@@ -91,6 +92,7 @@ function App() {
       <h1> To Do list for {FormatDate(today)}</h1>
       <NewToDoList />
       <FavoriteColor />
+      <Garage></Garage>
     </div>
   );
 }
