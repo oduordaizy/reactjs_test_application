@@ -18,3 +18,8 @@ braces { }.
 Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the 
 props you can pass to an <img>:
 
+useEffect runs on every render.
+There are several ways to control when a side effect runs.
+We should always include teh second parameter which accepts an array. We can optionally pass dependencies to useEffect in this array.
+
+

@@ -3,6 +3,7 @@ import Gallery from './Gallery.js';
 //import {Profile} from './Gallery.js'
 
 import { Garage } from "./more.js";
+import { Timer } from "./SideEffects.js";
 
 function AboutPage() {
   return (
@@ -93,6 +94,8 @@ function App() {
       <NewToDoList />
       <FavoriteColor />
       <Garage></Garage>
+      <Timer></Timer>
+
     </div>
   );
 }
